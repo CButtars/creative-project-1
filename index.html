@@ -22,16 +22,20 @@
 
   <body>
     <div class="container">
-      <div class="row"><h1 class="header1">Welcom to the Resume Editor!</h1></div>
+      <div class="row"><h1 class="header1">Welcome to the Resume Editor!</h1></div>
       <div class="row">
         <div class="col-12 col-md-10">
           <h1></hq>
           <p>This is a paragraph inside one of the columns</p>
           One of two columns
         </div>
-        <div class="col-6 col-md-2">
+        <div class="col-6 col-md-2" id="para2">
           <p>This is a paragraph inside one of the columns</p>
-          One of two columns
+          One of two columns<!-- COLOR WORKS HERE-->
+          <button class="buttonR" onclick="colorRed()">Red</button>
+          <button class="buttonG" onclick="colorGreen()">Green</button>
+          <button class="buttonB" onclick="colorBlue()">Blue</button>
+          <button class="buttonBl" onclick="colorBlack()">Black</button>
         </div>
       </div>
     </div>
@@ -50,6 +54,20 @@
       var selectedElement;
       function changeElement() {
         
+      }
+      
+      var para2;
+      function colorRed() {
+        document.getElementById("para2").style.color = "#f44336";
+      }
+      function colorGreen() {
+        document.getElementById("para2").style.color = "#4CAF50";
+      }
+      function colorBlue() {
+        document.getElementById("para2").style.color = "#008CBA";
+      }
+      function colorBlack() {
+        document.getElementById("para2").style.color = "#000000";
       }
     </script>
   </body>

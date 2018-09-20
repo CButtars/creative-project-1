@@ -9,3 +9,91 @@
 paragraph {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+.buttonR {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px #999;
+    background-color: #f44336;
+    border-radius: 8px;
+}
+
+.buttonG {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px #999;
+    background-color: #4CAF50;
+    border-radius: 8px;
+}
+
+.buttonB {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px #999;
+    background-color: #008CBA;
+    border-radius: 8px;
+}
+
+.buttonBl {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px #999;
+    background-color: #2F4F4F;
+    border-radius: 8px;
+}
+
+.buttonR:hover {
+    background-color: #8B0000;
+}
+
+.buttonG:hover {
+    background-color: #006400;
+}
+
+.buttonB:hover {
+    background-color: #191970;
+}
+
+.buttonBl:hover {
+    background-color: #000000;
+}
+
+.buttonR:active {
+    background-color: #8B0000;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.buttonG:active {
+    background-color:#006400;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.buttonB:active {
+    background-color: #191970;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.buttoneBl:active {
+    background-color: #000000;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
