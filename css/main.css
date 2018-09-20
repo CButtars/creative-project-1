@@ -7,7 +7,7 @@ p {
 }
 
 .Header {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: Verdana, Geneva, sans-serif;
     text-align: center;
 }
 
@@ -16,16 +16,17 @@ p {
     font-size: 14px;
     font-weight: bold;
     padding-bottom: 8px;
+    text-align: center;
 }
 
 .Paragraph {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     font-size: 12px;
 }
 
 .Contact {
     font-size: 12px;
-    font-family: "Lucida Sans Console", sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     text-align: center;
 }
 

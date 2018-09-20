@@ -21,8 +21,9 @@
     <!--Custom global variables for future scripts -->
     <script>
       var selectedElement = "Header";
-      var selectedFont = "arial,sans";
-      var selectedColor = "blue";
+      
+      //fonts
+      var comicSans ="\"Comic Sans MS\" cursive, sans-serif"
     </script>
 
   </head>
@@ -33,8 +34,8 @@
       </br>
       </br>
       <div class="row">
-        <div class="col-12 col-md-10">
-          <h2 class="Contact bigger" id="bolded">Sparty Spartan</h2>
+        <div class="col-12 col-md-10 border">
+          <h2 class="Header">Sparty Spartan</h2>
           <p class="Contact">A111 Butterfield Hall</p>
           <p class="Contact">East Lansing, MI 48824</p>
           <p class="Contact">(123) 456-7890 - spartan1@byu.edu</p>
@@ -50,9 +51,44 @@
             <li>National Honor Society Scholar (2016,2017)</li>
             <li>125 cumulative community service hours</li>
           </ul></p>
+          <h3 class="SubHeader">Experience</h3>
+          <p class="Paragraph" id="bolded">Senior Class Vice-President</p>
+          <p class="Paragraph">North Stree High Student Government, City, MI</p>
+          <ul class="Paragraph">
+            <li>Served as official liaison between Student Government and NSH administration</li>
+            <li>Facilitated monthly senior class meetings with 25 student government members</li>
+            <li>Spearheaded “Fall Carnival” fundraiser that raised over $1,900 for senior class trip</li>
+            <li>Oversaw 10 colleagues on Homecoming and Prom Planning Committees</li>
+          </ul>
+          <p class="Paragraph" id="bolded">Youth Counselor</p>
+          <p class="Paragraph">North Street YMCA, City, MI </p>
+          <ul class="Paragraph">
+            <li>Supervised 35 youth campers ranging from 7 to 10 years old</li>
+            <li>Coordinated daily activities for campers to keep them active and engaged </li>
+            <li>Planned an end of summer event for 200 campers with a group of 4 other counselors</li>
+          </ul>
+          <p class="Paragraph" id="bolded">Crew Member</p>
+          <p class="Paragraph">McDonalds, City, MI </p>
+          <ul class="Paragraph">
+            <li>Received 2 ‘Outstanding Customer Services’ awards for performance</li>
+            <li>Trained between 2 and 5 new Crew Members each quarter, providing ongoing coaching and
+mentoring during their initial months on the job</li>
+            <li>Collaborated with a team of 5 to provide efficient services in a fast-paced environment</li>
+          </ul>
+          </br>
+          <h3 class="SubHeader">Activites</h3>
+          <p class="Paragraph" id="bolded">Member, North Street High Track Team, City, MI</p>
+          <ul class="Paragraph">
+            <li>Committed 10 hours per week to practice and to developing team building skills</li>
+          </ul>
+          <p class="Paragraph" id="bolded">Volunteer, Boys & Girls Club, City, MI</p>
+          <ul class="Paragraph">
+            <li>Worked with youth between 3-5 hours per week on interpersonal skills and relationships</li>
+          </ul>
+          </br>
           
         </div>
-        <div class="col-6 col-md-2">
+        <div class="col-6 col-md-2 border">
           <p>The currently selected element is:
             <span id="element">Header</span>
           </p>
@@ -73,8 +109,16 @@
               <span class="checkmark"></span>
             </label>
             </br>
-            <button onclick="changeColor(event)">Set Color to Blue</button> 
-            <button onclick="changeFont(event)">Set Font to Arial</button>
+            <p>Colors:</p>
+            <button onclick="changeColor('blue')">Set Color to Blue</button> 
+            <button onclick="changeColor('black')">Set Color to Black</button> 
+            </br>
+            </br>
+            <p>Fonts:</p>
+            <button onclick="changeFont('Arial, Helvetica, sans-serif')">Set Font to Arial</button>
+            <button onclick="changeFont('Comic Sans MS')">Set Font to Comic Sans</button>
+            <button onclick="changeFont('Impact')">Set Font to Impact</button>
+            <button onclick="changeFont('Verdana')">Set Font to Verdana</button>
         </div>
       </div>
     </div>
@@ -86,21 +130,19 @@
     
     <!--Custom Scripts-->
     <script>
-      function changeFont() {
-        //document.getElementsByClassName(selectedElement).style.fontFamily = selectedFont;
+      function changeFont(newFont) {
         var x = document.getElementsByClassName(selectedElement);
         var i;
         for (i = 0; i < x.length; i++) {
-            x[i].style.fontFamily = selectedFont;
+            x[i].style.fontFamily = newFont;
         }
         event.preventDefault();
       }
-      function changeColor() {
-        //document.getElementsByClassName(selectedElement).style.color = selectedColor;
+      function changeColor(newColor) {
         var x = document.getElementsByClassName(selectedElement);
         var i;
         for (i = 0; i < x.length; i++) {
-            x[i].style.color = selectedColor;
+            x[i].style.color = newColor;
         }
         event.preventDefault();
       }
