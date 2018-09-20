@@ -29,22 +29,52 @@
 
   <body>
     <div class="container">
-      <div class="row"><h1 class="header1" id="Header">Welcome to the Resume Editor!</h1></div>
+      <div class="row"><h1>Welcome to the Resume Editor!</h1></div>
+      </br>
+      </br>
       <div class="row">
         <div class="col-12 col-md-10">
-          <p>This is a paragraph inside one of the columns</p>
-          One of two columns
+          <h2 class="Contact bigger" id="bolded">Sparty Spartan</h2>
+          <p class="Contact">A111 Butterfield Hall</p>
+          <p class="Contact">East Lansing, MI 48824</p>
+          <p class="Contact">(123) 456-7890 - spartan1@byu.edu</p>
+          </br>
+          <h3 class="SubHeader">Education</h3>
+          <p class="Paragraph" id="bolded">Bachelor of Arts, Communication</p>
+          <p class="Paragraph">Michigan State University, East Lansing, MI</p>
+          </br>
+          <p class="Paragraph" id="bolded">High School Diploma</p>
+          <p class="Paragraph">North Street High School, City, MI
+          <ul class="Paragraph">
+            <li>Class Salutatorian</li>
+            <li>National Honor Society Scholar (2016,2017)</li>
+            <li>125 cumulative community service hours</li>
+          </ul></p>
+          
         </div>
         <div class="col-6 col-md-2">
           <p>The currently selected element is:
-          <script> document.write(selectedElement); </script>
+            <span id="element">Header</span>
           </p>
-          <p>The currently selected font is:
-          <script> document.write(selectedFont); </script>
-          </p>
-            <form style="color: black;">
-                <button onclick="changeColor(event)">Set Color to Blue</button> 
-            </form>  
+            <label class="rcontainer" onclick="updateCurrentElement('Header');">Header
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="rcontainer" onclick="updateCurrentElement('SubHeader');">SubHeader
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="rcontainer" onclick="updateCurrentElement('Paragraph');">Paragraph
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="rcontainer" onclick="updateCurrentElement('Contact');">Contact Information
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            </br>
+            <button onclick="changeColor(event)">Set Color to Blue</button> 
+            <button onclick="changeFont(event)">Set Font to Arial</button>
         </div>
       </div>
     </div>
@@ -57,12 +87,27 @@
     <!--Custom Scripts-->
     <script>
       function changeFont() {
-        document.getElementById(selectedElement).style.fontFamily = selectedFont;
+        //document.getElementsByClassName(selectedElement).style.fontFamily = selectedFont;
+        var x = document.getElementsByClassName(selectedElement);
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.fontFamily = selectedFont;
+        }
         event.preventDefault();
       }
       function changeColor() {
-        document.getElementById(selectedElement).style.color = selectedColor;
+        //document.getElementsByClassName(selectedElement).style.color = selectedColor;
+        var x = document.getElementsByClassName(selectedElement);
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.color = selectedColor;
+        }
         event.preventDefault();
+      }
+      function updateCurrentElement(input) {
+        selectedElement=input;
+        document.getElementById("element").innerHTML = input;
+        event.preventDefault;
       }
     </script>
   </body>
