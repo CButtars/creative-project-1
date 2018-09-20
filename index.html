@@ -32,6 +32,7 @@
     <div class="container">
       <div class="row"><h1>Welcome to the Resume Editor!</h1></div>
       </br>
+      <p>See how color and font affects this resume.  Select the part of the resume you'd like to edit on thr right by selecting a radio button.  Then change the color and font with the buttons below those radio buttons.</p>
       </br>
       <div class="row">
         <div class="col-12 col-md-10 border extraPadding">
@@ -96,7 +97,11 @@ mentoring during their initial months on the job</li>
               <input type="radio" checked="checked" name="radio">
               <span class="checkmark"></span>
             </label>
-            <label class="rcontainer" onclick="updateCurrentElement('SubHeader');">SubHeader
+            <label class="rcontainer" onclick="updateCurrentElement('Contact');">Contact Information
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="rcontainer" onclick="updateCurrentElement('SubHeader');">Sub-Header
               <input type="radio" name="radio">
               <span class="checkmark"></span>
             </label>
@@ -104,14 +109,12 @@ mentoring during their initial months on the job</li>
               <input type="radio" name="radio">
               <span class="checkmark"></span>
             </label>
-            <label class="rcontainer" onclick="updateCurrentElement('Contact');">Contact Information
-              <input type="radio" name="radio">
-              <span class="checkmark"></span>
-            </label>
             </br>
             <p>Colors:</p>
-            <button onclick="changeColor('blue')">Set Color to Blue</button> 
-            <button onclick="changeColor('black')">Set Color to Black</button> 
+            <button class="buttonR" onclick="changeColor('#f44336')">Red</button>
+            <button class="buttonG" onclick="changeColor('#4CAF50')">Green</button>
+            <button class="buttonB" onclick="changeColor('#008CBA')">Blue</button>
+            <button class="buttonBl" onclick="changeColor('#000000')">Black</button>
             </br>
             </br>
             <p>Fonts:</p>
