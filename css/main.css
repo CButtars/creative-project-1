@@ -3,7 +3,7 @@ h1 {
 }
 
 p {
-    line-height: normal;
+    line-height: 80%;
 }
 
 .Header {
@@ -13,7 +13,7 @@ p {
 
 .SubHeader {
     font-family: Verdana, Geneva, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     padding-bottom: 8px;
     text-align: center;
@@ -32,6 +32,12 @@ p {
 
 #bolded {
     font-weight: bold;
+    font-size: 16px;
+    line-height: 60%;
+}
+
+.extraPadding {
+    padding: 60px;
 }
 
 .bigger {
