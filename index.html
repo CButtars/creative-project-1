@@ -22,9 +22,9 @@
 
   <body>
     <div class="container">
-      <div class="row"><h1 class="header1">Welcome to the Resume Editor!</h1></div>
+      <div class="row" id="head1"><h1 class="header1">Welcome to the Resume Editor!</h1></div>
       <div class="row">
-        <div class="col-12 col-md-10">
+        <div class="col-12 col-md-10" id="para1">
           <h1></hq>
           <p>This is a paragraph inside one of the columns</p>
           One of two columns
@@ -32,10 +32,18 @@
         <div class="col-6 col-md-2" id="para2">
           <p>This is a paragraph inside one of the columns</p>
           One of two columns<!-- COLOR WORKS HERE-->
-          <button class="buttonR" onclick="colorRed()">Red</button>
-          <button class="buttonG" onclick="colorGreen()">Green</button>
-          <button class="buttonB" onclick="colorBlue()">Blue</button>
-          <button class="buttonBl" onclick="colorBlack()">Black</button>
+          <button class="buttonR" onclick="colorRed()">Turn Header Red</button>
+          <button class="buttonR" onclick="colorRed1()">Turn Paragraph 1 Red</button>
+          <button class="buttonR" onclick="colorRed2()">Turn Paragraph 2 Red</button>
+          <button class="buttonG" onclick="colorGreen()">Turn Header Green</button>
+          <button class="buttonG" onclick="colorGreen1()">Turn Paragraph 1 Green</button>
+          <button class="buttonG" onclick="colorGreen2()">Turn Paragraph 2 Green</button>
+          <button class="buttonB" onclick="colorBlue()">Turn Header Blue</button>
+          <button class="buttonB" onclick="colorBlue1()">Turn Paragraph 1 Blue</button>
+          <button class="buttonB" onclick="colorBlue2()">Turn Paragraph 2 Blue</button>
+          <button class="buttonBl" onclick="colorBlack()">Turn Header Black</button>
+          <button class="buttonBl" onclick="colorBlack1()">Turn Paragraph 1 Black</button>
+          <button class="buttonBl" onclick="colorBlack2()">Turn Paragraph 2 Black</button>
         </div>
       </div>
     </div>
@@ -56,17 +64,45 @@
         
       }
       
-      var para2;
+      var head1;
       function colorRed() {
-        document.getElementById("para2").style.color = "#f44336";
+        document.getElementById("head1").style.color = "#f44336";
       }
       function colorGreen() {
-        document.getElementById("para2").style.color = "#4CAF50";
+        document.getElementById("head1").style.color = "#4CAF50";
       }
       function colorBlue() {
-        document.getElementById("para2").style.color = "#008CBA";
+        document.getElementById("head1").style.color = "#008CBA";
       }
       function colorBlack() {
+        document.getElementById("head1").style.color = "#000000";
+      }
+      
+      var para1;
+      function colorRed1() {
+        document.getElementById("para1").style.color = "#f44336";
+      }
+      function colorGreen1() {
+        document.getElementById("para1").style.color = "#4CAF50";
+      }
+      function colorBlue1() {
+        document.getElementById("para1").style.color = "#008CBA";
+      }
+      function colorBlack1() {
+        document.getElementById("para1").style.color = "#000000";
+      }
+      
+      var para2;
+      function colorRed2() {
+        document.getElementById("para2").style.color = "#f44336";
+      }
+      function colorGreen2() {
+        document.getElementById("para2").style.color = "#4CAF50";
+      }
+      function colorBlue2() {
+        document.getElementById("para2").style.color = "#008CBA";
+      }
+      function colorBlack2() {
         document.getElementById("para2").style.color = "#000000";
       }
     </script>
