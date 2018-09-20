@@ -18,27 +18,36 @@
 
     <title>Resume adjuster</title>
 
+    <!--Custom global variables for future scripts -->
+    <script>
+      var selectedElement = "Header";
+      var selectedFont = "arial,sans";
+      var selectedColor = "blue";
+    </script>
+
   </head>
 
   <body>
     <div class="container">
-      <div class="row"><h1 class="header1">Welcom to the Resume Editor!</h1></div>
+      <div class="row"><h1 class="header1" id="Header">Welcome to the Resume Editor!</h1></div>
       <div class="row">
         <div class="col-12 col-md-10">
-          <h1></hq>
           <p>This is a paragraph inside one of the columns</p>
           One of two columns
         </div>
         <div class="col-6 col-md-2">
-          <p>This is a paragraph inside one of the columns</p>
-          One of two columns
+          <p>The currently selected element is:
+          <script> document.write(selectedElement); </script>
+          </p>
+          <p>The currently selected font is:
+          <script> document.write(selectedFont); </script>
+          </p>
+            <form style="color: black;">
+                <button onclick="changeColor(event)">Set Color to Blue</button> 
+            </form>  
         </div>
       </div>
     </div>
-    
-    
-    <!--Custom Javascript-->
-    
     
     <!-- Bootstrap required scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -47,9 +56,13 @@
     
     <!--Custom Scripts-->
     <script>
-      var selectedElement;
-      function changeElement() {
-        
+      function changeFont() {
+        document.getElementById(selectedElement).style.fontFamily = selectedFont;
+        event.preventDefault();
+      }
+      function changeColor() {
+        document.getElementById(selectedElement).style.color = selectedColor;
+        event.preventDefault();
       }
     </script>
   </body>
